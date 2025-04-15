@@ -1,0 +1,119 @@
+@use "./global.scss" as *;
+
+header {
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 68px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  margin-bottom: 80px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: $color-black;
+      font-weight: $Bold;
+      font-size: 17px;
+      line-height: 20px;
+      letter-spacing: -1px;
+      transition: ease 0.3s;
+    }
+    a:hover {
+      color: #a30c33;
+    }
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-nav {
+    li {
+      a {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+//////////////////////////   АДАПТИВ   ////////////////////////////////
+
+@media (max-width: 890px) {
+  header {
+    display: block;
+  }
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    li {
+      a {
+        padding: 0;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    height: 110px;
+  }
+  .header-nav {
+    flex-wrap: wrap;
+  }
+  .header-nav {
+    justify-content: start;
+    li {
+      a {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    height: 110px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+  img {
+    width: 150px;
+  }
+  .header-nav {
+    flex-wrap: wrap;
+  }
+  .header-nav {
+    justify-content: space-between;
+    li {
+      a {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
